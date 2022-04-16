@@ -14,7 +14,19 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ __('Selamat datang!, ini adalah contoh aplikasi midtrans') }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    Navigasi
+                </div>
+                <div class="card-body">
+                    <a href="#" class="btn btn-md btn-primary">
+                        Masuk ke halaman Midtrans
+                    </a>
                 </div>
             </div>
         </div>
