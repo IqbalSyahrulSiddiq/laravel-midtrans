@@ -11,5 +11,8 @@ $factory->define(Order::class, function (Faker $faker) {
         'number' => $this->faker->randomNumber(8),
         'total_price' => $this->faker->numberBetween(25000, 200000),
         'payment_status' => 1,
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'phone' => '082214714583',
     ];
 });
