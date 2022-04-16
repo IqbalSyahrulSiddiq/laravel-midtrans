@@ -50,11 +50,13 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
+        
         $snapToken = $order->snap_token;
         if (empty($snapToken)) {
             // Jika snap token masih NULL, buat token snap dan simpan ke database
  
             $midtrans = new CreateSnapTokenService($order);
+            //dd($midtrans);
             $snapToken = $midtrans->getSnapToken();
  
             $order->snap_token = $snapToken;
