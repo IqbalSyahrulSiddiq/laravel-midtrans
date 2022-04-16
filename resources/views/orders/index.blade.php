@@ -30,7 +30,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('orders.show', $order->id) }}" class="btn btn-success">
-                                                Lihat
+                                                Lihat Detail Pesanan
                                             </a>
                                         </td>
                                     </tr>
