@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Order;
 use Illuminate\Http\Request;
 use App\Services\Midtrans\CreateSnapTokenService;
+use DB;
 
 class OrderController extends Controller
 {
@@ -15,7 +16,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = DB::table('orders')->get();
+
+        return view('orders.index',compact('orders'));
     }
 
     /**

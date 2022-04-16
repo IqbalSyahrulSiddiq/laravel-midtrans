@@ -24,7 +24,7 @@
                     Navigasi
                 </div>
                 <div class="card-body">
-                    <a href="#" class="btn btn-md btn-primary">
+                    <a href="{{ route('orders.index') }}" class="btn btn-md btn-primary">
                         Masuk ke halaman Midtrans
                     </a>
                 </div>
