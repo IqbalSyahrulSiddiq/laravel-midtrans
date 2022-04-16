@@ -17,6 +17,18 @@
                                 <td><b>Rp {{ number_format($order->total_price, 2, ',', '.') }}</b></td>
                             </tr>
                             <tr>
+                                <td>Nama Customer</td>
+                                <td><b>{{ $order->name }}</b></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><b>{{ $order->email }}</b></td>
+                            </tr>
+                            <tr>
+                                <td>No Kontak</td>
+                                <td><b>{{ $order->phone }}</b></td>
+                            </tr>
+                            <tr>
                                 <td>Status Pembayaran</td>
                                 <td><b>
                                         @if ($order->payment_status == 1)
@@ -33,6 +45,10 @@
                                 <td><b>{{ $order->created_at->format('d M Y H:i') }}</b></td>
                             </tr>
                         </table>
+                        <hr>
+                        <a href="{{ route('orders.index') }}" class="btn btn-sm btn-primary">
+                            Kembali 
+                        </a>
                     </div>
                 </div>
             </div>
