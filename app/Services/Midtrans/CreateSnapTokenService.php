@@ -25,20 +25,14 @@ class CreateSnapTokenService extends Midtrans
                 'order_id' => $this->order->number,
                 'gross_amount' => $this->order->total_price,
             ],
-            'item_details' => [
-                /* [
-                    'id' => $this->orderCart->id,
-                    'price' => $this->orderCart->price,
-                    'quantity' => $this->orderCart->quantity,
-                    'name' => $this->orderCart->name,
-                ], */
+            /* 'item_details' => [
                 [
                     'id' => 1,
                     'price' => '60000',
                     'quantity' => 2,
                     'name' => 'Memory Card VGEN 4GB',
                 ],
-            ],
+            ], */
             'customer_details' => [
                 'first_name' => $this->order->name,
                 'email' => $this->order->email,
