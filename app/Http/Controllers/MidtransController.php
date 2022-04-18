@@ -18,7 +18,7 @@ class MidtransController extends Controller
 
         $callbackNotification['order_id'] = $request->order_id;
 
-        $updateStatusBayar = DB::table('order')->where('number',$callbackNotification['order_id'])->update([
+        $updateStatusBayar = DB::table('orders')->where('number',$callbackNotification['order_id'])->update([
             'payment_status' => 2
         ]);
 
