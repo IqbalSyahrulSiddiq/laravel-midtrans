@@ -36,6 +36,16 @@ class MidtransController extends Controller
             return response()->json([
                 'message' => 'Sukses melakukan pembayaran'
             ], 200);
+
+        }elseif($callbackNotification['transaction_status'] == 'pending')
+        {
+            $updateStatusBayar = DB::table('orders')->where('number',$callbackNotification['order_id'])->update([
+                'payment_status' => 4
+            ]);
+    
+            return response()->json([
+                'message' => 'Sukses melakukan pembayaran, saat ini pending'
+            ], 200);
         }
     }
 }
