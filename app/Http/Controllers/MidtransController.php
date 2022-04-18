@@ -27,7 +27,7 @@ class MidtransController extends Controller
         $callbackNotification['merchant_id'] = $request->merchant_id;
         $callbackNotification['gross_amount'] = $request->gross_amount;
 
-        if($callbackNotification['payment_status'] == 'settlement')
+        if($callbackNotification['transaction_status'] == 'settlement')
         {
             $updateStatusBayar = DB::table('orders')->where('number',$callbackNotification['order_id'])->update([
                 'payment_status' => 2
