@@ -24,8 +24,12 @@
                                                 Menunggu Pembayaran
                                             @elseif ($order->payment_status == 2)
                                                 Sudah Dibayar
-                                            @else
+                                            @elseif ($order->payment_status == 3)
                                                 Kadaluarsa
+                                            @elseif ($order->payment_status == 4)
+                                                Pending
+                                            @elseif ($order->payment_status == 5)
+                                                Batal
                                             @endif
                                         </td>
                                         <td>
