@@ -63,7 +63,7 @@
                     Navigasi
                 </div>
                 <div class="card-body">
-                    @if ($order->payment_status == 1)
+                    @if ($order->payment_status == 1 OR $order->payment_status == 4)
                         <button class="btn btn-primary" id="pay-button">Bayar Sekarang</button>
                     @else
                         Pembayaran berhasil
